@@ -20,7 +20,7 @@ El sistema permite:
 POST /api/movie/
 Input body:
 name: String,
-releaseDate: Date,
+releaseDate: Date (DD/MM/YYYY),
 genre: String
 ```
 
