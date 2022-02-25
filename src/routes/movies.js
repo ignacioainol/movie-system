@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Movie = require('../models/Movie');
 
-const movieValidation = require('./../validations/movies.js');
-
 router.get('/:id', async (req,res) => {
     try {
         const movie = await Movie.findById(req.params.id);
@@ -24,8 +22,6 @@ router.get('/', async (req,res) => {
 
 router.post('/',async (req,res) => {
     try {
-        // const { body: movie } = req;
-        // const movieErrors = movieValidation.saveAndUpdate(movie);
 
         const {name, releaseDate, genre} = req.body;
         
